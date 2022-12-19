@@ -18,8 +18,32 @@
             height: 100vh;
         }
     </style>
+    header('Access-Control-Allow-Origin: http://k96346m0.beget.tech/');
+    header('Access-Control-Allow-Origin: http://k96346m0.beget.tech/');
 </head>
 <body>
     <iframe src="http://k96346m0.beget.tech/" frameborder="0" allowfullscreen sandbox></iframe>
+    
+    <object data="http://k96346m0.beget.tech/" width="600" height="400">
+        <embed src="http://k96346m0.beget.tech/" width="600" height="400"> </embed>
+        Error: Embedded data could not be displayed.
+    </object>
+    
+    <object data="http://k96346m0.beget.tech/" width="400" height="300" type="text/html">
+        Alternative Content
+    </object>
+    
+    <embed src="http://k96346m0.beget.tech/" width=200 height=200 />
+    
+    <script>
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4 && xhr.status == 200) {
+            document.getElementById('displayDiv').innerHTML = xhr.responseText;
+            }
+        };
+        xhr.open('GET', 'http://k96346m0.beget.tech/', true);
+        xhr.send();
+    </script>
 </body>
 </html>
